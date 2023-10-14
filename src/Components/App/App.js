@@ -1,9 +1,11 @@
-import './App.css';
+import "./App.css";
+import { Map } from "../Map/Map";
 
 function App() {
   return (
-    <div className="mt-[1000px]">
-      APP
+    <div className="w-full">
+      Карта может возвращаться на страницу, с которой была открыта!
+      <Map size="small" className="m-auto" />
     </div>
   );
 }
