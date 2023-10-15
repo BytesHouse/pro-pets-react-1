@@ -1,5 +1,5 @@
 import CloseBtn from "../CloseBtn/CloseBtn";
-import GreenBtn from "../Green/GreenBtn";
+import GreenBtn from "../GreenBtn/GreenBtn";
 import LostPets from "../LostPets/LostPets";
 import MapMarker from "../icons/MapMarker";
 
@@ -28,7 +28,7 @@ export const Map = ({ size = "big" }) => {
       </div>
       <GreenBtn isPage={false} />
       {/* menu left-bottom */}
-      <div className="absolute z-10 bottom-[25px] left-[25px] h-[300px] w-[300px] bg-white border-[2px]">
+      <div className="absolute z-10 bottom-[25px] left-[25px] w-max h-max flex flex-col gap-y-[10px]">
         <LostPets />
       </div>
     </div>
