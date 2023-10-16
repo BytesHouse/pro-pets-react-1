@@ -41,4 +41,40 @@ export const LostPetsList = [
     age: "2",
     images: [LostPet11, LostPet11, LostPet11],
   },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
+  {
+    name: "Murzik",
+    gender: "Male",
+    age: "2",
+    images: [LostPet11, LostPet11, LostPet11],
+  },
 ];
