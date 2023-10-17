@@ -3,6 +3,7 @@ import GreenBtn from "../GreenBtn/GreenBtn";
 import LostPets from "../LostPets/LostPets";
 import MapMarker from "../icons/MapMarker";
 import MapPlace from "../MapPlace/MapPlace";
+import SearchBar from "../SearchBar/SearchBar";
 
 export const Map = ({ size = "big" }) => {
   return size === "big" ? (
@@ -16,17 +17,7 @@ export const Map = ({ size = "big" }) => {
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
       {/* search bar */}
-      <div className="absolute z-10 shadow-small top-[25px] left-[25px] w-[400px] h-[44px] p-[10px] bg-white rounded-[15px] flex flex-row gap-x-[10px]">
-        <MapMarker />
-        <input
-          className="grow"
-          type="search"
-          name=""
-          id=""
-          placeholder="Geolocation Search..."
-        />
-        <CloseBtn />
-      </div>
+      <SearchBar />
       <GreenBtn isPage={false} />
       {/* menu left-bottom */}
       <div className="absolute z-10 bottom-[25px] left-[25px] max-w-[400px] h-max flex flex-col gap-y-[10px]">
