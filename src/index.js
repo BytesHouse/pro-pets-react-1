@@ -35,7 +35,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+if(localStorage.getItem('i18nextLng') === null){
+  localStorage.setItem('i18nextLng', 'en');
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <UserProvider>
