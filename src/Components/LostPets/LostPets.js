@@ -8,8 +8,11 @@ import { ButtonInfo } from "../ButtonInfo/ButtonInfo";
 import InfoIcon from "../icons/InfoIcon";
 import { ButtonSecondary } from "../ButtonSecondary/ButtonSecondary";
 import { CatInBox } from "../icons/CatInBox";
+import CloseBtn from "../CloseBtn/CloseBtn";
+import { useState } from "react";
 
 export default function LostPets() {
+  const [isShow, hide] = useState(false);
   const slider = useRef(null);
 
   const settings = {
@@ -21,6 +24,7 @@ export default function LostPets() {
     slidesToShow: 1,
     slidesToScroll: 1,
     dotsClass: "slick-custom-dots",
+    adaptiveHeight: true,
     appendDots: (dots) => (
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         <div
@@ -71,8 +75,14 @@ export default function LostPets() {
     ),
   };
 
-  return (
-    <div className="p-[10px] px-[5px] w-[400px] bg-white rounded-[15px] space-y-[5px]">
+  return !isShow ? (
+    <div className="relative p-[10px] px-[5px] bg-white rounded-[15px] space-y-[5px]">
+      <CloseBtn
+        className="z-10 absolute top-[10px] right-[10px]"
+        onClick={() => {
+          hide(!isShow);
+        }}
+      />
       <h4 className="text-left px-[5px] text-primaryGold text-[18px]">
         Have you ever see this pet?
       </h4>
@@ -102,5 +112,7 @@ export default function LostPets() {
       </div> */}
       <div className="for-dots "></div>
     </div>
+  ) : (
+    ""
   );
 }

@@ -2,6 +2,7 @@ import CloseBtn from "../CloseBtn/CloseBtn";
 import GreenBtn from "../GreenBtn/GreenBtn";
 import LostPets from "../LostPets/LostPets";
 import MapMarker from "../icons/MapMarker";
+import MapPlace from "../MapPlace/MapPlace";
 
 export const Map = ({ size = "big" }) => {
   return size === "big" ? (
@@ -28,7 +29,8 @@ export const Map = ({ size = "big" }) => {
       </div>
       <GreenBtn isPage={false} />
       {/* menu left-bottom */}
-      <div className="absolute z-10 bottom-[25px] left-[25px] w-max h-max flex flex-col gap-y-[10px]">
+      <div className="absolute z-10 bottom-[25px] left-[25px] max-w-[400px] h-max flex flex-col gap-y-[10px]">
+        <MapPlace />
         <LostPets />
       </div>
     </div>

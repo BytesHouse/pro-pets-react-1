@@ -29,8 +29,8 @@ export const NavArrowRight = () => {
       <path
         d="M2.38105 10C2.38104 14.2079 5.79221 17.6191 10.0001 17.6191C14.208 17.6191 17.6191 14.2079 17.6191 10C17.6191 5.79215 14.208 2.38098 10.0001 2.38098C5.79221 2.38098 2.38105 5.79214 2.38105 10Z"
         stroke="#8A8A8A"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M9.04764 12.8572L11.9048 10L9.04764 7.14288"

@@ -1,6 +1,6 @@
-export default function CloseBtn() {
+export default function CloseBtn({ ...rest }) {
   return (
-    <button>
+    <button {...rest}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
