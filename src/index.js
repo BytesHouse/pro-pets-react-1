@@ -6,7 +6,14 @@ import App from "./Components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserProvider } from "./contexts/user.context";
-import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from "./Pages";
+import {
+  Dashboard,
+  Home,
+  LoginPage,
+  PrivateRoute,
+  Signup,
+  MapPage,
+} from "./Pages";
 
 const router = createBrowserRouter([
   {
@@ -33,18 +40,23 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/map",
+    element: <MapPage />,
+  },
 ]);
 
-if(localStorage.getItem('i18nextLng') === null){
-  localStorage.setItem('i18nextLng', 'en');
+if (localStorage.getItem("i18nextLng") === null) {
+  localStorage.setItem("i18nextLng", "en");
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <UserProvider>
       <RouterProvider router={router} />
     </UserProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
