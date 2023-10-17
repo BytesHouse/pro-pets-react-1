@@ -1,7 +1,5 @@
-import CloseBtn from "../CloseBtn/CloseBtn";
 import GreenBtn from "../GreenBtn/GreenBtn";
 import LostPets from "../LostPets/LostPets";
-import MapMarker from "../icons/MapMarker";
 import MapPlace from "../MapPlace/MapPlace";
 import SearchBar from "../SearchBar/SearchBar";
 
