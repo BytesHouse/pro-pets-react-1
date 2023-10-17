@@ -1,20 +1,26 @@
+import { WallFiles } from "../WallFiles/WallFiles";
 import { AuthorPost } from "../AuthorPost/AuthorPost";
 import { ContentPost } from "../ContentPost/ContentPost";
-import { DatePost } from "../DatePost/DatePost";
+import { LikesPost } from "../LikesPost/LikesPost";
+import { WelcomePaw } from "../WelcomePaw/WelcomePaw";
 
 export const WallPost = () => {
   return (
     <div className="rounded-lg">
       <div>
-        <p className="flex justify-between">
-          <AuthorPost />
-        </p>
-        <p className=" float-left">
-          <DatePost />
-        </p>
+        <AuthorPost />
       </div>
       <div className="bg-white mt-5">
         <ContentPost />
+      </div>
+      <div>
+        <WallFiles />
+      </div>
+      <div>
+        <WelcomePaw />
+      </div>
+      <div>
+        <LikesPost />
       </div>
     </div>
   );
