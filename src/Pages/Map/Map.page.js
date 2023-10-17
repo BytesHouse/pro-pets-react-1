@@ -1,3 +1,4 @@
+import { CheckBoxCustom } from "../../Components/CheckBoxCustom/CheckBoxCustom";
 import { HeaderDashboard } from "../../Components/HeaderDashboard/HeaderDashboard";
 import { Map } from "../../Components/Map/Map";
 
@@ -14,6 +15,7 @@ export default function MapPage() {
             My account
           </div>
           <Map />
+      <CheckBoxCustom/>
         </div>
       </div>
     </div>

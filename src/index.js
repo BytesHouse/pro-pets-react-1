@@ -6,6 +6,7 @@ import App from "./Components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserProvider } from "./contexts/user.context";
+import { RecoilRoot } from 'recoil'
 import {
   Dashboard,
   Home,
@@ -58,9 +59,11 @@ if (localStorage.getItem("i18nextLng") === null) {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
+    <RecoilRoot>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </RecoilRoot>
   </React.StrictMode>,
 );
 

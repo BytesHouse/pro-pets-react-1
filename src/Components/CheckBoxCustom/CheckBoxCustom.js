@@ -1,12 +1,16 @@
 import { useState } from "react"
+import { useRecoilState, useRecoilValue } from 'recoil'
+import { status } from "../../atoms/status";
 
 export const CheckBoxCustom = () => {
-    const [isChecked, setIsChecked] = useState(true);
+    const [state, setState] = useRecoilState(status);
+    const stateValue = useRecoilValue(status);
+    console.log(stateValue)
     const handleClick = () => {
-        setIsChecked(!isChecked);
+        setState(!state);
     }
-    return <div className="border border-[#8A8A8A] rounded-[2px] p-[3px] w-[11px] h-[11px] flex justify-center items-center" onClick={handleClick}>
-        {isChecked && <ArrowCheckIcon />}
+    return <div className="border border-[#8A8A8A] rounded-[2px] p-[3px] w-[100px] h-[100px] flex justify-center items-center" onClick={handleClick}>
+        {state && <ArrowCheckIcon />}
     </div>
 }
 const ArrowCheckIcon = () => {

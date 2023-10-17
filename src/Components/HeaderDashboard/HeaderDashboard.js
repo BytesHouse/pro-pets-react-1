@@ -1,6 +1,7 @@
 import { ButtonBurger } from "../ButtonBurger/ButtonBurger"
 import { ButtonPrimary } from "../ButtonPrimary/ButtonPrimary"
 import { ButtonSecondary } from "../ButtonSecondary/ButtonSecondary"
+import { CheckBoxCustom } from "../CheckBoxCustom/CheckBoxCustom"
 import { GlobalSearch } from "../GlobalSearch/GlobalSearch"
 import { CatInBox } from "../icons/CatInBox"
 import { PawIcon } from "../icons/PawIcon"
@@ -10,6 +11,7 @@ import { Notification } from "../Notification/Notification"
 export const HeaderDashboard = () => {
     return (
         <header className="py-[20px]">
+            <CheckBoxCustom/>
             <div className="container m-auto flex justify-between">
                 <div className='flex-none  ml-[20px]'>
                     <Logo />

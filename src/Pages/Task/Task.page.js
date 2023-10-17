@@ -19,6 +19,10 @@ import { PetStoreIcon } from "../../Components/icons/AnimalServicesIcons/PetStor
 import { VetHelpIcon } from "../../Components/icons/AnimalServicesIcons/VetHelpIcon";
 import { VolounteerIcon } from "../../Components/icons/AnimalServicesIcons/VolounteerIcon";
 
+import {useRecoilState} from 'recoil'
+import { status } from "../../atoms/status";
+import { CheckBoxCustom } from "../../Components/CheckBoxCustom/CheckBoxCustom";
+
 
 const sidebarData = [
     {title:"Profile",link:"google.com",icon:<HouseIcon/>},
@@ -38,7 +42,8 @@ const animalSideBar = [
     {title:"Other services",link:"google.com",icon:<OtherIcon/>}]
 
 const TaskPage = () => {
-
+    const [state, setState] = useRecoilState(status);
+    console.log(state)
     return <div className="p-[10px] flex flex-col align-center items-center self-stretch rounded-2xl bg-green-700 h-[702px] w-[220px] "> 
         <div className="">
         
@@ -65,7 +70,7 @@ const TaskPage = () => {
                 <hr className="w-[170px] pb-[10px]"/>
                 
                     <p className="py-[10px] px-[5px] flex gap-[10px] items-center  self-stretch">Main</p>
-                    {sidebarData.map(data => (<button className=" px-[15px] py-[5px] flex w-[220px] h-[30px] rounded-xl align-center fill-black stroke-black gap-[10px] hover:bg-[#FF855F]  hover:text-white group hover:fill-white hover:stroke-white">{data.icon} {data.title} 
+                    {sidebarData.map(data => (<button  className=" px-[15px] py-[5px] flex w-[220px] h-[30px] rounded-xl align-center fill-black stroke-black gap-[10px] hover:bg-[#FF855F]  hover:text-white group hover:fill-white hover:stroke-white">{data.icon} {data.title} 
                     <span className="bg-[#FF855F] w-[50px] ml-auto text-white group-hover:bg-white group-hover:text-[#FF855F] rounded-[99px] ">{data.counter}</span>
                     </button>))}
                 </div>
@@ -73,7 +78,7 @@ const TaskPage = () => {
                     <p className=" py-[10px] px-[5px] items-center flex gap-[10px] self-stretch">Animal Services</p>
                     {animalSideBar.map(data => (<button className=" px-[15px] py-[5px] rounded-xl w-[200px] h-[30px] hover:bg-[#FF855F] hover:text-white flex align-center gap-[10px] hover:fill-white fill-black stroke-black hover:stroke-white">{data.icon} {data.title} <span>{data.counter}</span></button>))}
                 </div>
-            
+            <CheckBoxCustom/>
         </div>
     </div>
     

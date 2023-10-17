@@ -6,3 +6,9 @@
 1. Подключить и настроить React-Redux
 2. Создать новые slice
 3. Использовать глобальный Store
+
+
+Recoil 
+1. Создать Атом (initial state -> начальное состояние)
+2. useRecoilState() -> state & setState 
+3. useRecoilValue() -> state

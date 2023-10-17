@@ -1,3 +1,4 @@
+import { CheckBoxCustom } from "../CheckBoxCustom/CheckBoxCustom";
 import GreenBtn from "../GreenBtn/GreenBtn";
 import LostPets from "../LostPets/LostPets";
 import MapPlace from "../MapPlace/MapPlace";
@@ -6,6 +7,8 @@ import SearchBar from "../SearchBar/SearchBar";
 export const Map = ({ size = "big" }) => {
   return size === "big" ? (
     <div className="relative w-full rounded-[15px] border-none overflow-clip min-h-[790px]">
+      <CheckBoxCustom/>
+
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.2755890500644!2d37.61730957713332!3d55.753714691920656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5759f5b76b%3A0xde502cd817a1b053!2z0JzQsNCy0LfQvtC70LXQuSDQki7QmC4g0JvQtdC90LjQvdCwINC90LAg0JrRgNCw0YHQvdC-0Lkg0L_Qu9C-0YnQsNC00Lg!5e0!3m2!1sru!2s!4v1697276513183!5m2!1sru!2s"
         title="Google Map"
