@@ -1,15 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import './i18n';
-import App from './Components/App/App';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { UserProvider } from './contexts/user.context';
-import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from './Pages';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./i18n";
+import App from "./Components/App/App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { UserProvider } from "./contexts/user.context";
+import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from "./Pages";
 
 const router = createBrowserRouter([
   {
@@ -21,23 +18,26 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: '/signup',
-    element: <Signup />
+    path: "/signup",
+    element: <Signup />,
   },
   {
-    path: '/dashboard',
-    element: <PrivateRoute><Dashboard /></PrivateRoute>
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>
+    ),
   },
   {
-    path: '/',
-    element: <Home />
-  }
+    path: "/",
+    element: <Home />,
+  },
 ]);
 
 if(localStorage.getItem('i18nextLng') === null){
   localStorage.setItem('i18nextLng', 'en');
 }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
