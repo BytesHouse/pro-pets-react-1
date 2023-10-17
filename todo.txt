@@ -1,3 +1,8 @@
-1. done Подключить и настроить библиотеки для мультиязчности (i18next, react i18next, browser-languagedetector, http-backend)
-2. done Нарисовать UI для LanguageSwitcher (Переключатель языков)
-3. done locales - в которых мы будем хранить лексики приложения
+0. State Manager
+1. Подключить и настроить Recoil
+2. Создать новые атомы
+3. Использовать атомы
+
+1. Подключить и настроить React-Redux
+2. Создать новые slice
+3. Использовать глобальный Store
