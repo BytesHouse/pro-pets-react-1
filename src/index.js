@@ -13,6 +13,7 @@ import {
   PrivateRoute,
   Signup,
   MapPage,
+  Task
 } from "./Pages";
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/map",
     element: <MapPage />,
+  },
+  {
+    path: "/task",
+    element: <Task />,
   },
 ]);
 

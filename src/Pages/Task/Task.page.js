@@ -37,7 +37,7 @@ const animalSideBar = [
     {title:"Volounteer teams",link:"google.com",icon:<VolounteerIcon/>},
     {title:"Other services",link:"google.com",icon:<OtherIcon/>}]
 
-export const TaskPage = () => {
+const TaskPage = () => {
 
     return <div className="p-[10px] flex flex-col align-center items-center self-stretch rounded-2xl bg-green-700 h-[702px] w-[220px] "> 
         <div className="">
@@ -78,3 +78,4 @@ export const TaskPage = () => {
     </div>
     
 }
+export default TaskPage
