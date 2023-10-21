@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { UserProvider } from './contexts/user.context';
 import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from './Pages';
+import { RecoilRoot } from 'recoil';
 
 const router = createBrowserRouter([
   {
@@ -41,9 +42,11 @@ if(localStorage.getItem('i18nextLng') === null){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <RecoilRoot>
     <UserProvider>
       <RouterProvider router={router} />
-    </UserProvider>
+      </UserProvider>
+    </RecoilRoot>
   </React.StrictMode>
 );
 
