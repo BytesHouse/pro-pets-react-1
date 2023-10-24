@@ -1,8 +1,9 @@
-0. State Manager
-1. Подключить и настроить Recoil
-2. Создать новые атомы
-3. Использовать атомы
-
-1. Подключить и настроить React-Redux
-2. Создать новые slice
-3. Использовать глобальный Store
+0. Теория и парадигма Redux  +
+1. Установка Redux Toolkit & react-redux +
+2. Создать хранилище Store +
+3. Provider Store +
+4. Создать slice срез + 
+4* ExtraReducers and Services !!!
+5. Добавить reducer в Store + 
+6. Использование состояния useSelector и useDispatch
+7. Примеры использования 

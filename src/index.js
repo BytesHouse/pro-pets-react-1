@@ -6,6 +6,8 @@ import App from "./Components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { UserProvider } from "./contexts/user.context";
+import { Provider } from "react-redux";
+import store from './store/store'
 import {
   Dashboard,
   Home,
@@ -58,9 +60,11 @@ if (localStorage.getItem("i18nextLng") === null) {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
+    <Provider store={store}>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </Provider>
   </React.StrictMode>,
 );
 
