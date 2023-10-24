@@ -9,10 +9,10 @@ export const counterSlice = createSlice({
     },
     // функции изменения состояния
     reducers: {
-        increment: (state) => state.value += 1,
-        decrement: (state) => state.value -= 1,
-        incrementByAmount: (state, action) => state.value += action.payload,
-        decrementByAmout: (state, action) => state.value -= action.payload
+        increment: (state) => { state.value += 1 },
+        decrement: (state) => { state.value -= 1 },
+        incrementByAmount: (state, action) => { state.value += action.payload },
+        decrementByAmout: (state, action) => { state.value -= action.payload }
     }
 });
              // Action for dispatch

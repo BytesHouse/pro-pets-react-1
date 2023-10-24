@@ -17,6 +17,8 @@ import {
   MapPage,
   Task
 } from "./Pages";
+import ReduxComponent from "./Components/ReduxComponent/ReduxComponent";
+import ReduxComp2 from "./Components/ReduxComponent/ReduxComp2";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/task",
     element: <Task />,
+  },
+  {
+    path: "/redux",
+    element: <div><ReduxComponent /><ReduxComp2/></div>,
   },
 ]);
 
