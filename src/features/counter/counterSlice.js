@@ -5,16 +5,17 @@ export const counterSlice = createSlice({
     name: 'counter',
     // Начальное состояние
     initialState: {
-        value: 0
+        value: 0,
+        amount: 0,
     },
     // функции изменения состояния
     reducers: {
         increment: (state) => { state.value += 1 },
         decrement: (state) => { state.value -= 1 },
         incrementByAmount: (state, action) => { state.value += action.payload },
-        decrementByAmout: (state, action) => { state.value -= action.payload }
+        decrementByAmount: (state, action) => { state.value -= action.payload },
     }
 });
              // Action for dispatch
-export const {increment, decrement, incrementByAmount} = counterSlice.actions
+export const { increment, decrement, incrementByAmount, decrementByAmount } = counterSlice.actions
 export default counterSlice.reducer
