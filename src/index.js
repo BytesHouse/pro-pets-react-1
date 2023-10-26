@@ -1,19 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import './i18n';
-import App from './Components/App/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "./i18n";
+import App from "./Components/App/App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { UserProvider } from "./contexts/user.context";
+import { Provider } from "react-redux";
+import store from './store/store'
 import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { UserProvider } from './contexts/user.context';
-import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from './Pages';
-import { RecoilRoot } from 'recoil';
-import { Provider } from 'react-redux';
-import store from './store/store';
-import { ReduxComponent } from './Components/ReduxComponent/ReduxComponent';
+  Dashboard,
+  Home,
+  LoginPage,
+  PrivateRoute,
+  Signup,
+  MapPage,
+  Task
+} from "./Pages";
+import ReduxComponent from "./Components/ReduxComponent/ReduxComponent";
+import ReduxComp2 from "./Components/ReduxComponent/ReduxComp2";
 
 const router = createBrowserRouter([
   {
@@ -25,36 +30,48 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: '/signup',
-    element: <Signup />
+    path: "/signup",
+    element: <Signup />,
   },
   {
-    path: '/dashboard',
-    element: <PrivateRoute><Dashboard /></PrivateRoute>
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <Dashboard />
+      </PrivateRoute>
+    ),
   },
   {
-    path: '/',
-    element: <Home />
-  }
-  , {
-    path: '/redux',
-    element: <ReduxComponent />
-  }
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/map",
+    element: <MapPage />,
+  },
+  {
+    path: "/task",
+    element: <Task />,
+  },
+  {
+    path: "/redux",
+    element: <div><ReduxComponent /><ReduxComp2/></div>,
+  },
 ]);
 
-if(localStorage.getItem('i18nextLng') === null){
-  localStorage.setItem('i18nextLng', 'en');
+if (localStorage.getItem("i18nextLng") === null) {
+  localStorage.setItem("i18nextLng", "en");
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}> {/* react redux */}
+    <Provider store={store}>
       <UserProvider>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </UserProvider>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

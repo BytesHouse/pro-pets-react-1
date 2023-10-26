@@ -1,3 +1,9 @@
-1. done Подключить и настроить библиотеки для мультиязчности (i18next, react i18next, browser-languagedetector, http-backend)
-2. done Нарисовать UI для LanguageSwitcher (Переключатель языков)
-3. done locales - в которых мы будем хранить лексики приложения
+0. Теория и парадигма Redux  +
+1. Установка Redux Toolkit & react-redux +
+2. Создать хранилище Store +
+3. Provider Store +
+4. Создать slice срез + 
+4* ExtraReducers and Services !!!
+5. Добавить reducer в Store + 
+6. Использование состояния useSelector и useDispatch
+7. Примеры использования 
