@@ -11,6 +11,9 @@ import {
 import { UserProvider } from './contexts/user.context';
 import { Dashboard, Home, LoginPage, PrivateRoute, Signup } from './Pages';
 import { RecoilRoot } from 'recoil';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import { ReduxComponent } from './Components/ReduxComponent/ReduxComponent';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <Home />
   }
+  , {
+    path: '/redux',
+    element: <ReduxComponent />
+  }
 ]);
 
 if(localStorage.getItem('i18nextLng') === null){
@@ -42,11 +49,11 @@ if(localStorage.getItem('i18nextLng') === null){
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RecoilRoot>
-    <UserProvider>
+    <Provider store={store}> {/* react redux */}
+      <UserProvider>
       <RouterProvider router={router} />
       </UserProvider>
-    </RecoilRoot>
+    </Provider>
   </React.StrictMode>
 );
 
